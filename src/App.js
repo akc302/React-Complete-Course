@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
 import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
   const expenses = [
     {

@@ -1,16 +1,12 @@
 import "./ExpenseItem.css";
-function ExpenseItem(props) {
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
-  const year = props.date.getFullYeart();
+import ExpenseDate from "./ExpenseDate";
+import React, { Component } from "react";
 
+function ExpenseItem(props) {
   return (
     <div className="expense-item">
-      <div>
-        <div>{month}</div>
-        <div>{year}</div>
-        <div>{day}</div>
-      </div>
+      <ExpenseDate date={props.date} />
+      {/* passes data using props from A to B component  */}
       <div className="expense-item_description"></div>
       <h2>my first component!</h2>
       <h2>{props.title}</h2>
